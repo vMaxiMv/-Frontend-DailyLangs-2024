@@ -1,0 +1,336 @@
+@mixin absolute-position($top, $left){
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin font-size-color($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+.main{
+  position: relative;
+      }
+    .crescent{
+      width: 20%;
+      position: absolute;
+      top: 5%;
+      right:0;
+    }
+    .twix{
+      @include absolute-position(75%, 7%)
+      }
+    .star{
+      @include absolute-position(85%, 80%)
+      }
+.main__content{
+  display: flex;
+  margin-top: 78px;
+
+}
+//-----------------------Левая часть-------------
+.left-content{
+   width: 25%;
+  .language-button{
+    padding: 13px 60px 13px 60px;
+    border-radius: 100px;
+    background-color: $main-color;
+    align-items: center;
+    cursor: pointer;
+  }
+  .mobile-settings{
+    display: none;
+  }
+  h3{
+    margin-bottom: 30px;
+    font-weight: $semiBold-weight;
+  }
+  p{
+    font-weight: $medium-weight;
+    margin-bottom: 10px;
+  }
+  .duration-block{
+    margin-top: 75px;
+  }
+  .complexity{
+    margin-top: 37px;
+  }
+  .skills{
+    margin-top: 30px;
+  }
+}
+//-----------------------Список сложности и навыков-------------
+.complexity-block, .skills-block{
+  li{
+    display: flex;
+    font-weight: $medium-weight;
+  }
+  li:not(:last-child){
+    margin-bottom: 11px;
+  }
+  .ellipse, .rect{
+    margin-right: 12px;
+  }
+}
+//-----------------------Правая часть-------------
+
+.right-content{
+  width: 80%;
+  h1, .english__background{
+    font-size: 44px;
+    font-weight: $bold-weight;
+  }
+  .english__background{
+    background-color: $background-color;
+    border-radius: 100px;
+    padding:4px 15px 9px 15px;
+  }
+}
+
+.cards__set{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 30px 50px;
+  margin-top: 75px;
+  //-----------------------Отдельно взятая карточка-------------
+
+
+  .card{
+    position: relative;
+    width: 100%;
+    height: 341px;
+    border-radius: 30px;
+    background-color: #C05AFF;
+    //-----------------------Фоновые символы-------------
+    .background__symbol1{
+      width: 60%;
+      @include absolute-position(8%, 30%)
+    }
+    .background__symbol2{
+      width: 38%;
+      @include absolute-position(25%, 55%)
+    }
+
+    //-----------------------Заголовок картчки-------------
+    .header{
+      @include absolute-position(7%, 5%);
+      h2, span{
+        @include font-size-color(22px, $white-color);
+        font-weight: $bold-weight;
+      }
+        span{
+          color:#FFFD50;
+        }
+      }
+    }
+  @include phone-adaptability(1000px){
+    .card {
+      .header {
+        h2, span {
+          @include font-size-color(20px, $white-color);
+        }
+        span{
+          color:#FFFD50;
+        }
+      }
+    }
+    .flag{
+      width: 52px;
+    }
+    .detail{
+      @include font-size-color(14px, $white-color);
+      margin-left: 22px;
+    }
+  }
+    //-----------------------////Заголовок картчки////-------------
+    .girl-block{
+      position:absolute;
+      bottom: -4px;
+      left:0;
+      img:first-child{
+        width: 90%;
+        height: auto;
+      }
+      .flag{
+        @include absolute-position(65%, 62%);
+      }
+    }
+    //-----------------------Имя девушки-------------
+    .girls-name{
+      width: 45%;
+      @include absolute-position(35%, 38%);
+        p{
+          font-size: 14px;
+          margin-left: 15px;
+          padding: 6px 12px 6px 12px;
+          border-radius: 60px;
+          background-color: $background-color;
+        }
+    }
+  }
+//-----------------------////Имя девушки////-------------
+
+//-----------------------Ценник------------------
+
+  .current{
+    @include absolute-position(50%, 50%);
+    @include font-size-color(40px, $white-color);
+  }
+  .discount{
+    @include absolute-position(63%, 80%);
+    @include font-size-color(10px, $white-color);
+    width: 45px;
+    font-weight: $semiBold-weight;
+    padding: 5px;
+    background-color: #FF50BA;
+    border-radius: 100px;
+    text-align: center;
+  }
+  .old{
+    @include absolute-position(70%, -5%);
+    @include font-size-color(20px, $white-color);
+    margin-left: 75%;
+    text-decoration: line-through;
+    text-decoration-color: #FF50BA;
+  }
+  .detail{
+    @include absolute-position(85%, 62%);
+    @include font-size-color($text-size, $white-color);
+    font-weight: $medium-weight;
+    cursor: pointer;
+  }
+
+//-----------------------////Отдельно взятая карточка////-------------
+
+
+//-----------------------Адаптивная часть------------------------------------------------
+
+@include phone-adaptability(767px){
+  .main{
+    .crescent{
+      display: none;
+    }
+    .twix{
+      display: none;
+    }
+    .star{
+      width: 84px;
+      @include absolute-position(1%, 68%)
+    }
+  }
+  .main__content{
+    display: flex;
+    flex-direction: column;
+  }
+  .left-content{
+    display: flex;
+
+    .language-button{
+      margin-right: 6px;
+      padding: 10px 50px 10px 50px;
+      img{
+        width: 65px;
+      }
+    }
+    .mobile-settings{
+      display: block;
+      background-color: inherit;
+    }
+  }
+
+  .course-info{
+    display: none;
+  }
+  //-----------------------Отдельно взятая карточка-------------
+  .right-content {
+    width: 100%;
+    h1, .english__background {
+      font-size: 30px;
+    }
+    .english__background{
+      display: inline-block;
+    }
+    h1{
+      margin-top: 31px;
+    }
+    h1 span{
+      display: block;
+      margin-top: 6px;
+    }
+
+    .cards__set{
+      display: block;
+      margin-top: 50px;
+    }
+    .card{
+      width: 100%;
+      margin: 0 auto;
+      .background__symbol1{
+        width: 50%;
+        @include absolute-position(8%, 42%)
+      }
+      .header{
+        h2, span{
+          font-size: $text-size;
+        }
+      }
+      .girls-name{
+        width: fit-content;
+      }
+      .girl-img{
+        width: 187px;
+      }
+      .flag{
+        width: 52px;
+      }
+    }
+    .card-1{
+      margin-bottom: 18px;
+    }
+    .card-2, .card-4{
+      display: none;
+    }
+  }
+//---------------------Ценник---------------
+
+  .current{
+    @include absolute-position(50%, 60%);
+    @include font-size-color(36px, $white-color);
+  }
+  .discount{
+    @include absolute-position(60%, 80%);
+    @include font-size-color(8px, $white-color);
+    width: 38px;
+    font-weight: $semiBold-weight;
+    padding: 4px;
+  }
+  .old{
+    @include absolute-position(220px, -30px);
+    @include font-size-color(18px, $white-color);
+  }
+  .detail{
+    @include font-size-color(14px, $white-color);
+    img{
+      margin-left: 3px;
+      width:14px;
+    }
+  }
+
+  //---------------------Имя девушки-------------
+.card {
+  .girls-name {
+    @include absolute-position(120px, 120px);
+
+    p {
+      font-size: 12px;
+    }
+
+    img {
+      width: 18px;
+    }
+  }
+}
+}
+
+  
+

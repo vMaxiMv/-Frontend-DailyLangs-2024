@@ -1,0 +1,24 @@
+@import "variables";
+
+body{
+  font-family: Mulish;
+}
+
+.container{
+  width: 100%;
+  max-width: 1140px;
+  margin:auto;
+}
+
+@mixin phone-adaptability ($breakpoint){
+  @media screen and (max-width: $breakpoint){
+    @content;
+  }
+}
+
+@include phone-adaptability(767px){
+  .container{
+    width: 90%;
+    margin: 0 auto;
+  }
+}

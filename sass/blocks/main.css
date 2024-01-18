@@ -1,0 +1,491 @@
+body {
+  font-family: Mulish;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+}
+
+input, button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  width: 100%;
+}
+
+.nav-row-text {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+.nav-row-text ul {
+  display: flex;
+}
+.nav-row-text li {
+  font-weight: 500;
+}
+.nav-row-text li:not(:last-child) {
+  margin-right: 5vw;
+}
+.nav-row-text .active {
+  color: #C05AFF;
+}
+
+.nav-row-icon ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-row-icon li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.lang-set {
+  display: flex;
+}
+.lang-set p {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-row-text {
+    display: none;
+  }
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo img {
+    width: 131px;
+  }
+  .search-icon, .lang-set {
+    display: none;
+  }
+  .profile-icon img {
+    width: 33px;
+  }
+  .burger-menu {
+    display: inline;
+  }
+}
+.main {
+  position: relative;
+}
+
+.crescent {
+  width: 20%;
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+
+.twix {
+  position: absolute;
+  top: 75%;
+  left: 7%;
+}
+
+.star {
+  position: absolute;
+  top: 85%;
+  left: 80%;
+}
+
+.main__content {
+  display: flex;
+  margin-top: 78px;
+}
+
+.left-content {
+  width: 25%;
+}
+.left-content .language-button {
+  padding: 13px 60px 13px 60px;
+  border-radius: 100px;
+  background-color: #C05AFF;
+  align-items: center;
+  cursor: pointer;
+}
+.left-content .mobile-settings {
+  display: none;
+}
+.left-content h3 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.left-content p {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.left-content .duration-block {
+  margin-top: 75px;
+}
+.left-content .complexity {
+  margin-top: 37px;
+}
+.left-content .skills {
+  margin-top: 30px;
+}
+
+.complexity-block li, .skills-block li {
+  display: flex;
+  font-weight: 500;
+}
+.complexity-block li:not(:last-child), .skills-block li:not(:last-child) {
+  margin-bottom: 11px;
+}
+.complexity-block .ellipse, .complexity-block .rect, .skills-block .ellipse, .skills-block .rect {
+  margin-right: 12px;
+}
+
+.right-content {
+  width: 80%;
+}
+.right-content h1, .right-content .english__background {
+  font-size: 44px;
+  font-weight: 800;
+}
+.right-content .english__background {
+  background-color: #C9FF50;
+  border-radius: 100px;
+  padding: 4px 15px 9px 15px;
+}
+
+.cards__set {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px 50px;
+  margin-top: 75px;
+}
+.cards__set .card {
+  position: relative;
+  width: 100%;
+  height: 341px;
+  border-radius: 30px;
+  background-color: #C05AFF;
+}
+.cards__set .card .background__symbol1 {
+  width: 60%;
+  position: absolute;
+  top: 8%;
+  left: 30%;
+}
+.cards__set .card .background__symbol2 {
+  width: 38%;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+}
+.cards__set .card .header {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+.cards__set .card .header h2, .cards__set .card .header span {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 800;
+}
+.cards__set .card .header span {
+  color: #FFFD50;
+}
+@media screen and (max-width: 1000px) {
+  .cards__set .card .header h2, .cards__set .card .header span {
+    font-size: 20px;
+    color: #fff;
+  }
+  .cards__set .card .header span {
+    color: #FFFD50;
+  }
+  .cards__set .flag {
+    width: 52px;
+  }
+  .cards__set .detail {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 22px;
+  }
+}
+.cards__set .girl-block {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+.cards__set .girl-block img:first-child {
+  width: 90%;
+  height: auto;
+}
+.cards__set .girl-block .flag {
+  position: absolute;
+  top: 65%;
+  left: 62%;
+}
+.cards__set .girls-name {
+  width: 45%;
+  position: absolute;
+  top: 35%;
+  left: 38%;
+}
+.cards__set .girls-name p {
+  font-size: 14px;
+  margin-left: 15px;
+  padding: 6px 12px 6px 12px;
+  border-radius: 60px;
+  background-color: #C9FF50;
+}
+
+.current {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  color: #fff;
+}
+
+.discount {
+  position: absolute;
+  top: 63%;
+  left: 80%;
+  font-size: 10px;
+  color: #fff;
+  width: 45px;
+  font-weight: 600;
+  padding: 5px;
+  background-color: #FF50BA;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.old {
+  position: absolute;
+  top: 70%;
+  left: -5%;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 75%;
+  text-decoration: line-through;
+  text-decoration-color: #FF50BA;
+}
+
+.detail {
+  position: absolute;
+  top: 85%;
+  left: 62%;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .main .crescent {
+    display: none;
+  }
+  .main .twix {
+    display: none;
+  }
+  .main .star {
+    width: 84px;
+    position: absolute;
+    top: 1%;
+    left: 68%;
+  }
+  .main__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-content {
+    display: flex;
+  }
+  .left-content .language-button {
+    margin-right: 6px;
+    padding: 10px 50px 10px 50px;
+  }
+  .left-content .language-button img {
+    width: 65px;
+  }
+  .left-content .mobile-settings {
+    display: block;
+    background-color: inherit;
+  }
+  .course-info {
+    display: none;
+  }
+  .right-content {
+    width: 100%;
+  }
+  .right-content h1, .right-content .english__background {
+    font-size: 30px;
+  }
+  .right-content .english__background {
+    display: inline-block;
+  }
+  .right-content h1 {
+    margin-top: 31px;
+  }
+  .right-content h1 span {
+    display: block;
+    margin-top: 6px;
+  }
+  .right-content .cards__set {
+    display: block;
+    margin-top: 50px;
+  }
+  .right-content .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .right-content .card .background__symbol1 {
+    width: 50%;
+    position: absolute;
+    top: 8%;
+    left: 42%;
+  }
+  .right-content .card .header h2, .right-content .card .header span {
+    font-size: 18px;
+  }
+  .right-content .card .girls-name {
+    width: fit-content;
+  }
+  .right-content .card .girl-img {
+    width: 187px;
+  }
+  .right-content .card .flag {
+    width: 52px;
+  }
+  .right-content .card-1 {
+    margin-bottom: 18px;
+  }
+  .right-content .card-2, .right-content .card-4 {
+    display: none;
+  }
+  .current {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    font-size: 36px;
+    color: #fff;
+  }
+  .discount {
+    position: absolute;
+    top: 60%;
+    left: 80%;
+    font-size: 8px;
+    color: #fff;
+    width: 38px;
+    font-weight: 600;
+    padding: 4px;
+  }
+  .old {
+    position: absolute;
+    top: 220px;
+    left: -30px;
+    font-size: 18px;
+    color: #fff;
+  }
+  .detail {
+    font-size: 14px;
+    color: #fff;
+  }
+  .detail img {
+    margin-left: 3px;
+    width: 14px;
+  }
+  .card .girls-name {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+  }
+  .card .girls-name p {
+    font-size: 12px;
+  }
+  .card .girls-name img {
+    width: 18px;
+  }
+}
+.footer {
+  background-color: #C05AFF;
+  color: #fff;
+  margin-top: 100px;
+  padding-top: 55px;
+  width: 100%;
+}
+.footer p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-section .privacy-terms p:not(:last-child) {
+  padding-bottom: 13px;
+}
+
+.second-section {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    margin-top: 70px;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+  .footer .privacy-terms {
+    width: 40%;
+  }
+  .footer .dailyLangs img {
+    width: 125px;
+  }
+  .second-section {
+    padding-bottom: 30px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

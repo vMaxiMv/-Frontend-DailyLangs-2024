@@ -1,0 +1,52 @@
+.footer{
+  background-color: $main-color;
+  color:$white-color;
+  margin-top: 100px;
+  padding-top: 55px;
+  width: 100%;
+
+  p{
+    font-size: $text-size;
+    font-weight: $medium-weight;
+  }
+}
+
+.first-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .privacy-terms{
+    p:not(:last-child){
+      padding-bottom: 13px;
+    }
+  }
+}
+.second-section{
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 45px;
+}
+
+//-----------------------////Отдельно взятая карточка////-------------
+
+@include phone-adaptability(767px){
+  .footer{
+    margin-top: 70px;
+    p{
+      font-size: 14px;
+    }
+    .privacy-terms{
+      width: 40%;
+    }
+
+    .dailyLangs{
+      img{
+        width: 125px;
+      }
+    }
+  }
+  .second-section{
+    padding-bottom: 30px;
+  }
+}

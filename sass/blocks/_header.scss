@@ -1,0 +1,76 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__content{
+  @include flex-center;
+  margin-top: 48px;
+  width: 100%;
+}
+.nav-row-text{
+  @include flex-end;
+  width: 50%;
+  ul {
+      display: flex;
+    }
+  li{
+    font-weight: $medium-weight;
+  }
+  li:not(:last-child){
+    margin-right: 5vw;
+  }
+  .active{
+    color: $main-color;
+  }
+}
+
+.nav-row-icon{
+  ul{
+    @include flex-center;
+  }
+  li:not(:last-child){
+    margin-right: 15px;
+  }
+}
+.burger-menu{
+  display: none;
+}
+.lang-set{
+  display: flex;
+  p{
+    margin-right: 5px;
+  }
+}
+
+//-----------------------Адаптивная часть-------------
+
+@include phone-adaptability(767px){
+  .nav-row-text{
+    display: none;
+  }
+  .header__content{
+    @include flex-center;
+  }
+  .logo{
+    img {
+      width: 131px;
+    }
+  }
+  .search-icon, .lang-set{
+    display: none;
+  }
+  .profile-icon img{
+    width: 33px;
+  }
+  .burger-menu{
+    display: inline;
+  }
+}
+
